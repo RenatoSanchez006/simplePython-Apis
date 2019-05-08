@@ -12,7 +12,8 @@ let userSchema = mongoose.Schema({
 
 let exercisesSchema = mongoose.Schema({
 	id: { type: String, required: true, unique: true },
-	answer: { type: String, required: true }
+	answer: { type: String, required: true },
+	path: {type: String, required: true}
 });
 
 let loginSchema = mongoose.Schema({

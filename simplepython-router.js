@@ -327,7 +327,7 @@ router.get('/exercise/:id', (req, res) => {
 // POST new exercise
 router.post('/new-exercise', (req, res, next) => {
 	// Validate all fields are sent in body
-	let reqFields = ['id', 'answer'];
+	let reqFields = ['id', 'answer', 'imageName'];
 	for (i in reqFields) {
 		let currentField = reqFields[i];
 
@@ -340,10 +340,13 @@ router.post('/new-exercise', (req, res, next) => {
 		}
 	}
 
+	let path = './img/exercises/' + req.body.imageName;
+	console.log(path);
 	// Create new user to add and push it to db
 	let newExercise = {
 		id: req.body.id,
-		answer: req.body.answer
+		answer: req.body.answer,
+		path: path
 	}
 
 	listPython.createExercise(newExercise)
