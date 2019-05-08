@@ -444,20 +444,121 @@ router.put('/update-exercise/:id', (req, res, next) => {
 });
 
 /* -------------------- FILE UPLOAD -------------------- */
-router.post('/uploadFile', function (req, res) {
-	var form = new formidable.IncomingForm();
-
-	form.parse(req);
-
-	form.on('fileBegin', function (name, file) {
-		file.path = __dirname + '/public/img/exercises/' + file.name;
-	});
-
-	form.on('file', function (name, file) {
-		console.log('Uploaded ' + file.name);
-	});
-
-	// res.sendFile(__dirname + '/index.html');
+router.get('/info', (req, res, next) => {
+	// Call to the simplepython-model
+	listPython.getAllInfo()
+		.then(info => {
+			res.status(200).json({
+				message: 'Succefully sent the information',
+				status: 200,
+				info: info
+			});
+		})
+		.catch(err => {
+			res.status(500).json({
+				message: 'Internal server error',
+				status: 500
+			});
+			next();
+		});
 });
+
+router.post('/info', (req, res, next) => {
+	// Validate all fields are sent in body
+	let reqFields = ['title', 'info'];
+	for (i in reqFields) {
+		let currentField = reqFields[i];
+
+		if (!(currentField in req.body)) {
+			res.status(406).json({
+				message: `Missing field '${currentField}' in body.`,
+				status: 406
+			});
+			next();
+		}
+	}
+
+	// Create new user to add and push it to db
+	let newInfo = {
+		title: req.body.title,
+		info: req.body.info
+	}
+
+	listPython.addInfo(newInfo)
+		.then(newInfo => {
+			res.status(201).json({
+				message: 'Info succesfully creted',
+				status: 201,
+				info: newInfo
+			});
+		})
+		.catch(err => {
+			console.log(err)
+			res.status(500).json({
+				message: 'Internal server error',
+				status: 500
+			});
+			next();
+		});
+});
+
+// DELETE user by info title
+router.delete('/info/:title', (req, res, next) => {
+
+	if (!('title' in req.body)) {
+		res.status(406).json({
+			message: 'Missing username field',
+			status: 406
+		});
+	}
+
+	let title = req.params.title;
+	if (title) {
+		if (title == req.body.title) {
+			listPython.deleteInfo(title)
+				.then(deletedTitle => {
+					res.json({
+						message: 'Succesfully deleted',
+						status: 204,
+						info: deletedTitle
+					}).status(204)
+				})
+				.catch(err => {
+					res.status(404).json({
+						message: 'Title not found',
+						status: 404
+					});
+				})
+		} else {
+			res.status(400).json({
+				message: 'Parameters do not match',
+				status: 400
+			});
+		}
+	} else {
+		res.status(406).json({
+			message: 'Missing id in parameters',
+			status: 406
+		});
+		next();
+	}
+});
+
+/* -------------------- FILE UPLOAD -------------------- */
+// router.post('/uploadFile', function (req, res) {
+// 	var form = new formidable.IncomingForm();
+
+// 	form.parse(req);
+
+// 	form.on('fileBegin', function (name, file) {
+// 		file.path = __dirname + '/public/img/exercises/' + file.name;
+// 	});
+
+// 	form.on('file', function (name, file) {
+// 		console.log('Uploaded ' + file.name);
+// 	});
+
+// 	// res.sendFile(__dirname + '/index.html');
+// });
 
 module.exports = router;

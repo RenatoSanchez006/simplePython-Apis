@@ -16,7 +16,6 @@ function countExercise() {
 		success: responseJson =>{ exerciseCount = responseJson.exercises;},
 		error: err => console.log(err)
 	});
-	console.log(exerciseCount); 
 }
 
 function getUserInfo(username) {
@@ -34,7 +33,6 @@ function displayName(user) {
 	$('#namePerson').append(`Welcome ${user.name}!`);
 
 	let sc = (user.score * 100)/exerciseCount;
-	console.log(user.score, sc);
 	$('#score').progress({
 		text: {
 			active: `Done ${user.score} of ${exerciseCount} problems correctly`,

@@ -19,9 +19,15 @@ let loginSchema = mongoose.Schema({
 	username: { type: String, required: true, unique: true }
 });
 
+let infoSchema = mongoose.Schema({
+	title: {type: String, required: true, unique: true}, 
+	info: {type: String, required: true}
+})
+
 let Users = mongoose.model('users', userSchema);
 let Exercises = mongoose.model('exercises', exercisesSchema);
 let Login = mongoose.model('logs', loginSchema);
+let Info = mongoose.model('info', infoSchema);
 
 const listPython = {
 	getUserLogIn: function () {
@@ -164,6 +170,36 @@ const listPython = {
 			.catch(err => {
 				throw new Error(err);
 			})
+	},
+	getAllInfo: function () {
+		return Info.find()
+			.then(info => {
+				return info;
+			})
+			.catch(err => {
+				throw new Error(err);
+			})
+	},
+	addInfo: function (newInfo) {
+		return Info.create(newInfo)
+		.then(newInfo => {
+			return newInfo;
+		})
+		.catch(err => {
+			throw new Error(err);
+		})
+	},
+	deleteInfo: function (title) {
+		return Info.findOneAndRemove({ title: title })
+			.then(deletedInfo => {
+				if (deletedInfo) {
+					return deletedInfo;
+				}
+				throw new Error("Info not found");
+			})
+			.catch(err => {
+				throw new Error(err);
+			});
 	}
 }
 
