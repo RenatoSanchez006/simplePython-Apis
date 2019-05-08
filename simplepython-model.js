@@ -130,7 +130,7 @@ const listPython = {
 			})
 	},
 	getExercise: function (exercise) {
-		return Exercises.find({ id: exercise })
+		return Exercises.findOne({ id: exercise })
 			.then(exercise => {
 				return exercise;
 			})

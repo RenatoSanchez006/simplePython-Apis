@@ -1,4 +1,5 @@
 let username; 
+let userInfo;
 
 $(function () {
 	console.log("Hello Practice");
@@ -19,7 +20,12 @@ function getUserInfo(username) {
 		method: "GET",
 		dataType: 'json',
 		async: false,
-		success: responseJson => authenticate(responseJson.user),
+		success: responseJson => 
+		{
+			userInfo = responseJson.user;
+			console.log(userInfo);
+			authenticate(responseJson.user)
+		},
 		error: err => console.log(err)
 	});
 }
@@ -81,12 +87,59 @@ $('#deleteProblem').click(function (event) {
 		success: responseJson => {
 			console.log(responseJson.exercise);
 			getAllExercises();
-			// $(`#${id}`).remove();
 		},
 		error: err => alert("Exercise not found")
 	});
 	$('#deleteId').val('');
 });
+
+$(document).on('click', '.submitExButton', function () {
+	let dbAnswer;
+	let answer = $(this).prev().val();
+	let id = $(this).closest(".ui.segment").attr("id");
+
+	$.ajax({
+		url: `./exercise/${id}`,
+		method: "GET",
+		dataType: 'json',
+		async: false,
+		success: responseJson => {
+			dbAnswer = responseJson.exercise.answer
+		},
+		error: err => console.log(err)
+	});
+
+	if(dbAnswer == answer) {
+		alert('Success');
+		updateUserInfo();
+	} else {
+		alert('Failure, try again');
+	}
+	$(this).prev().val('');
+
+});
+
+function updateUserInfo() {
+	console.log(username);
+	console.log(userInfo);
+	let newScore = 1 + userInfo.score;
+	let newPoints = {
+		score: newScore, 
+		progress: userInfo.progress
+	}
+	$.ajax({
+		url: `./update-points/${username}`,
+		method: "PUT",
+		contentType: 'application/json',
+		data: JSON.stringify(newPoints),
+		dataType: 'json',
+		async: false,
+		success: responseJson => {
+			console.log(responseJson.user);
+		},
+		error: err => alert("Exercise not found")
+	});
+}
 
 function displayExercises(exercises) {
 	console.log(exercises);
@@ -106,8 +159,8 @@ function displayExercises(exercises) {
 								<div class="six wide column centered">
 									<label>What does this code print?</label>
 									<div class="ui small action input">
-										<input type="text" placeholder="Answer...">
-										<button class="ui button">Submit</button>
+										<input class="submitAnswer" name="answer" type="text" placeholder="Answer...">
+										<button class="ui button submitExButton">Submit</button>
 									</div>
 								</div>
 							</div>
