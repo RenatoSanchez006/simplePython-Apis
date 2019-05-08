@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="./css/simplePython.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" href="./img/splogo.png">
+	<title>Simple Python | Learn</title>
+</head>
+
+<body>
+	<div class="ui grid sp-sidebar">
+		<!-- MENU -->
+		<div class="three wide column">
+			<div class="ui fluid vertical menu">
+				<div class="item">
+					<img class="ui small image" src="./img/spLogo.png">
+				</div>
+				<div class="hide" id="dashboard">
+					<a class="item">
+						<i class="user icon"></i>
+						Dashboard
+					</a>
+				</div>
+				<div id="home">
+					<a class="item">
+						<i class="home icon"></i>
+						Home
+					</a>
+				</div>
+				<div id="learn">
+					<a class="item active">
+						<i class="book icon"></i>
+						Learn
+					</a>
+				</div>
+				<div class="hide" id="practice">
+					<a class="item">
+						<i class="code icon"></i>
+						Practice
+					</a>
+				</div>
+				<div id="about">
+					<a class="item">
+						<i class="desktop icon"></i>
+						About Us
+					</a>
+				</div>
+				<div class="hide" id="logout">
+					<a class="item">
+						<i class="power off icon"></i>
+						Log Out
+					</a>
+				</div>
+
+			</div>
+		</div>
+		<div class="thirteen wide column">
+			<div class="ui container learnBox">
+				<h1 class="ui dividing centered header">
+					Lets get started!
+				</h1>
+			</div>
+			<!-- Admin section -->
+			<div class="ui segment admin-section hide">
+				<div class="ui grid">
+					<div class="eight wide column">
+						<div class="ui segment">
+							<h4 class="ui dividing header">Add a new section</h4>
+							<form class="ui form">
+								<div class="field">
+									<input type="text" placeholder="New section name">
+								</div>
+								<div class="field">
+									<textarea placeholder="Section information ..."></textarea>
+								</div>
+								<button class="ui red button">Add section</button>
+							</form>
+						</div>
+					</div>
+					<div class="eight wide column">
+						<div class="ui segment">
+							<h4 class="ui dividing header">Delete a section</h4>
+							<form class="ui form">
+								<div class="field">
+									<input type="text" placeholder="Section name">
+								</div>
+								<button class="ui centered red button" type="submit">Delete Section</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="ui segment">
+				<!-- Basics -->
+				<div class="section" id="basics">
+					<h2 class="ui dividing header">Basics</h2>
+					<p>Python is a simple programming language. It is very easy to pick up if you're a first timer.
+						You can use it for developing desktop GUI (graphic user interface) applications, websites
+						and web applications.</p>
+					<p>Useful points to keep in mind:</p>
+					<ul class="ui list">
+						<li>Python has a very straightforward syntax.</li>
+						<li>Python was made to both look good and be easy to read.</li>
+						<li>Some of its syntax comes from the programming language C.</li>
+						<li>If you get stuck with any python syntax, you can look up anything online.</li>
+					</ul>
+					<p>The most basic thing to learn is how to display something on the screen. Here is what you
+						need to do to display "Hello World!":</p>
+					<div class="ui segment">
+						<p>print ("Hello World!")</p>
+					</div>
+					<p>To comment your code in python you simply write a hashtag before the comment, like this:</p>
+					<div class="ui segment">
+						<p># This is a comment</p>
+					</div>
+				</div>
+				<!-- Variables -->
+				<div class="section" id="variables">
+					<h2 class="ui dividing header">Variables</h2>
+					<p>Sometimes you need to assign variables so you can use them later on in your code. The most basic
+						variable types in python are integers, floating point numbers, characters, strings and booleans.
+						Here is what you need to do to assign a value to a variable:</p>
+					<div class="ui segment">
+						<p>a = 5</p>
+						<p>b = "hello"</p>
+						<p>c = false</p>
+					</div>
+				</div>
+				<!-- Operators -->
+				<div class="section" id="operators">
+					<h2 class="ui dividing header">Operators</h2>
+					<p>Operators are used to manipulate the value of operands. Some of the most commonly used operators
+						include:</p>
+					<ul class="ui list">
+						<li>Addition (+)</li>
+						<li>Subtraction (-)</li>
+						<li>Multiplication (*)</li>
+						<li>Division (/)</li>
+						<li>Modulus (%)</li>
+					</ul>
+					<p>To understand better, here are some examples:</p>
+					<div class="ui segment">
+						<p>a + b = 5</p>
+						<p>c - d = 10</p>
+						<p>c / a = 2</p>
+					</div>
+					<p>There are comparison operators as well. They are used to compare the values with each other and
+						decide the relation between them. The easiest things to compare are variables but you can
+						compare anything including functions and operations The most commonly used comparison operators
+						include:</p>
+					<ul class="ui list">
+						<li>Equal (==)</li>
+						<li>Not equal (!=)</li>
+						<li>Greater than (>)</li>
+						<li>Less than (&lt;)</li>
+						<li>Greater than or equal (>=)</li>
+						<li>Greater than or equal (&lt;=)</li>
+					</ul>
+					<p>Considering that a = 5 and b = 4, here is an
+						example of variable comparisons:</p>
+					<div class="ui segment">
+						<p>#This will give you false:</p>
+						<p>a == b</p>
+						<p>#This will give you true:</p>
+						<p>a != b</p>
+						<p>#This will give you true:</p>
+						<p>a > b</p>
+					</div>
+				</div>
+				<!-- Lists -->
+				<div class="section" id="lists">
+					<h2 class="ui dividing header">Lists</h2>
+					<p>Lists can be very useful. They can contain any type of variable and you can have as many as you
+						wish. Here is an example of a list with 3 string items:</p>
+					<div class="ui segment">
+						<p>fruitList = ["apple", "banana", "strawberry"]</p>
+					</div>
+
+					<p>You can access a specific item in the list, but remember that the list starts with index 0. Here
+						is an example:</p>
+					<div class="ui segment">
+						<p>#This will return "banana":</p>
+						<p>fruitList[1]</p>
+					</div>
+				</div>
+				<!-- Conditions -->
+				<div class="section" id="conditions">
+					<h2 class="ui dividing header">Conditions</h2>
+					<p>Conditions are evaluated using booleans in python. You can evaluate anything including functions.
+						When an expression is evaluated, it returns TRUE or FALSE, like for example:</p>
+					<div class="ui segment">
+						<p>#This will return false:</p>
+						<p>if 5 > 10:</p>
+						<p>&emsp;print("5 is greater than 10")</p>
+						<p>else:</p>
+						<p>&emsp;print("5 is smaller than 10")</p>
+					</div>
+					<p>Now imagine that the function funct1 returns 100 and the function funct2 returns 500:</p>
+					<div class="ui segment">
+						<p>#This will return false, therefore the code inside the if will NOT be executed:</p>
+						<p>if funct1 == funct2</p>
+						<p>#This will return true, therefore the code inside the if will be executed:</p>
+						<p>if funct1 != funct2</p>
+					</div>
+				</div>
+				<!-- Loops -->
+				<div class="section" id="loops">
+					<h2 class="ui dividing header">Loops</h2>
+					<p>There are only 2 types of loops in python: for loop and while loop. Both of them itirate through
+						something as many times as specified.</p>
+					<p>The syntax for a for loop is: "for iterateVariable in iterationThing" where iterateVariable is
+						the variable that will iterate one by one through the iterationThing which is the sequence. This
+						is and example of a for loop:</p>
+					<div class="ui segment">
+						<p>veggieList = ["beans", "carrots", "lettuce"]</p>
+						<p>for x in VeggieList: </p>
+						<p>&emsp;print (x)</p>
+					</div>
+					<p>The solution to this for loop is:</p>
+					<div class="ui segment">
+						<p>beans</p>
+						<p>carrots</p>
+						<p>lettuce</p>
+					</div>
+					<p>The syntax for a while loop is: "while condition" where condition is what will be evaluated. So
+						for as long as the condition is true, the code inside the while loop will be executed, otherwise
+						it won't be executed. This is and example of a while loop:</p>
+					<div class="ui segment">
+						<p>i = 10</p>
+						<p>while i > 8:</p>
+						<p>&emsp; print ("Inside while loop")</p>
+						<p>&emsp; i = i + 1</p>
+					</div>
+					<p>The solution to this for loop is:</p>
+					<div class="ui segment">
+						<p>Inside while loop</p>
+						<p>Inside while loop</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/learn.js"></script>
+	<script type="text/javascript" src="./js/userHandler.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</body>
+
+</html>

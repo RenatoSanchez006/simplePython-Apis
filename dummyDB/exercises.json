@@ -1,0 +1,4 @@
+{"_id":{"$oid":"5cc9eea4fdbae357c8d8888d"},"id":"e01","answer":"The color of the ocean is: yellow","path":"./img/exercises/e01.png"}
+{"_id":{"$oid":"5cc9eea4fdbae357c8d8888e"},"id":"e02","answer":"25 10","path":"./img/exercises/e02.png"}
+{"_id":{"$oid":"5cc9eea4fdbae357c8d8888f"},"id":"e03","answer":"strawberry","path":"./img/exercises/e03.png"}
+{"_id":{"$oid":"5cc9eea5fdbae357c8d88890"},"id":"e04","answer":"3 is smaller than 7","path":"./img/exercises/e04.png"}

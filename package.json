@@ -1,0 +1,32 @@
+{
+  "name": "simplepython",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RenatoSanchez006/Simple-Python.git"
+  },
+  "keywords": [],
+  "author": "Renato Sanchez (https://github.com/RenatoSanchez006)",
+  "contributors": [
+    "Marcela Garza (https://github.com/marcegarzab)"
+  ],
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RenatoSanchez006/Simple-Python/issues"
+  },
+  "homepage": "https://github.com/RenatoSanchez006/Simple-Python#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.16.4",
+    "express-generator": "^4.16.1",
+    "formidable": "^1.2.1",
+    "mongoose": "^5.5.5",
+    "uuid": "^3.3.2"
+  },
+  "description": ""
+}

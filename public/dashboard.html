@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<link rel="stylesheet" href="./css/simplePython.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<meta charset="UTF-8" />
+	<link rel="icon" type="image/png" href="./img/splogo.png">
+	<title>Simple Python | Dashboard</title>
+</head>
+
+<body>
+	<div class="ui grid sp-sidebar">
+		<!-- MENU -->
+		<div class="three wide column">
+			<div class="ui fluid vertical menu">
+				<div class="item">
+					<img class="ui small image" src="./img/spLogo.png">
+				</div>
+				<a class="item active" id="dashboard">
+					<i class="user icon"></i>
+					Dashboard
+				</a>
+				<a class="item" id="learn">
+					<i class="book icon"></i>
+					Learn
+				</a>
+				<a class="item" id="practice">
+					<i class="code icon"></i>
+					Practice
+				</a>
+				<a class="item" id="logout">
+					<i class="power off icon"></i>
+					Log Out
+				</a>
+			</div>
+		</div>
+
+		<div class="thirteen wide column">
+			<div class="learnBox">
+				<h1 class="ui dividing centered header" id="namePerson">
+				</h1>
+				<div class="ui segment">
+					<img class="ui medium centered image" src="./img/avatar.gif">
+					<!-- score bar -->
+					<div class="ui segment">
+						<h2 class="ui header center-title top-margin">
+							Score
+						</h2>
+						<div class="ui large olive indicating progress progress-bar" data-value="1" data-total="10" id="score">
+							<div class="bar"></div>
+							<div class="label">Done correctly</div>
+						</div>
+					</div>
+					<!-- advancement bar -->
+					<!-- <div class="ui segment">
+						<h2 class="ui header center-title top-margin">
+							Overall Progress
+						</h2>
+						<div class="ui large green indicating progress progress-bar" data-value="1" data-total="10" id="advancement">
+							<div class="bar"></div>
+							<div class="label">Done questions</div>
+						</div>
+					</div> -->
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="./js/dashboard.js"></script>
+	<script type="text/javascript" src="./js/userHandler.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.js"></script>
+</body>
+
+</html>
