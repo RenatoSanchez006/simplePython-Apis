@@ -1,4 +1,25 @@
-{"_id":{"$oid":"5cc9eea4fdbae357c8d8888d"},"id":"e01","answer":"The color of the ocean is: yellow","path":"./img/exercises/e01.png"}
-{"_id":{"$oid":"5cc9eea4fdbae357c8d8888e"},"id":"e02","answer":"25 10","path":"./img/exercises/e02.png"}
-{"_id":{"$oid":"5cc9eea4fdbae357c8d8888f"},"id":"e03","answer":"strawberry","path":"./img/exercises/e03.png"}
-{"_id":{"$oid":"5cc9eea5fdbae357c8d88890"},"id":"e04","answer":"3 is smaller than 7","path":"./img/exercises/e04.png"}
+{"_id":{"$oid":"5cdb6c6cfd1d1a001712bc7e"},"id":"e01","answer":"Hello World!","path":"./img/exercises/e01.png","__v":0}
+{"_id":{"$oid":"5cdb6cabfd1d1a001712bc7f"},"id":"e02","answer":"15","path":"./img/exercises/e02.png","__v":0}
+{"_id":{"$oid":"5cdb6cf9fd1d1a001712bc80"},"id":"e03","answer":"example","path":"./img/exercises/e03.png","__v":0}
+{"_id":{"$oid":"5cdb6d2efd1d1a001712bc81"},"id":"e04","answer":"This is true","path":"./img/exercises/e04.png","__v":0}
+{"_id":{"$oid":"5cdb6d6cfd1d1a001712bc82"},"id":"e05","answer":"They are equal","path":"./img/exercises/e05.png","__v":0}
+{"_id":{"$oid":"5cdb6d87fd1d1a001712bc83"},"id":"e06","answer":"John","path":"./img/exercises/e06.png","__v":0}
+{"_id":{"$oid":"5cdb6da0fd1d1a001712bc84"},"id":"e07","answer":"This is concatenated","path":"./img/exercises/e07.png","__v":0}
+{"_id":{"$oid":"5cdb6daffd1d1a001712bc85"},"id":"e08","answer":"int","path":"./img/exercises/e08.png","__v":0}
+{"_id":{"$oid":"5cdb6dfbfd1d1a001712bc86"},"id":"e09","answer":"2","path":"./img/exercises/e09.png","__v":0}
+{"_id":{"$oid":"5cdb6e06fd1d1a001712bc87"},"id":"e10","answer":"12","path":"./img/exercises/e10.png","__v":0}
+{"_id":{"$oid":"5cdb6e39fd1d1a001712bc89"},"id":"e11","answer":"","path":"./img/exercises/e11.png","__v":0}
+{"_id":{"$oid":"5cdb6e60fd1d1a001712bc8a"},"id":"e12","answer":"This is correct","path":"./img/exercises/e12.png","__v":0}
+{"_id":{"$oid":"5cdb6ecbfd1d1a001712bc8b"},"id":"e13","answer":"Yes","path":"./img/exercises/e13.png","__v":0}
+{"_id":{"$oid":"5cdb6eeafd1d1a001712bc8c"},"id":"e14","answer":"3","path":"./img/exercises/e14.png","__v":0}
+{"_id":{"$oid":"5cdb6efafd1d1a001712bc8d"},"id":"e15","answer":"1,2","path":"./img/exercises/e15.png","__v":0}
+{"_id":{"$oid":"5cdb6f10fd1d1a001712bc8e"},"id":"e16","answer":"banana","path":"./img/exercises/e16.png","__v":0}
+{"_id":{"$oid":"5cdb6f27fd1d1a001712bc8f"},"id":"e17","answer":"apple","path":"./img/exercises/e17.png","__v":0}
+{"_id":{"$oid":"5cdb6f70fd1d1a001712bc91"},"id":"e18","answer":"this is apple this is banana","path":"./img/exercises/e18.png","__v":0}
+{"_id":{"$oid":"5cdb706ffd1d1a001712bc92"},"id":"e19","answer":"Hello from function1","path":"./img/exercises/e19.png","__v":0}
+{"_id":{"$oid":"5cdb7099fd1d1a001712bc93"},"id":"e21","answer":"Ford BMW","path":"./img/exercises/e21.png","__v":0}
+{"_id":{"$oid":"5cdb70c3fd1d1a001712bc94"},"id":"e22","answer":"Toyota Volvo","path":"./img/exercises/e22.png","__v":0}
+{"_id":{"$oid":"5cdb70e4fd1d1a001712bc95"},"id":"e23","answer":"4","path":"./img/exercises/e23.png","__v":0}
+{"_id":{"$oid":"5cdb710ffd1d1a001712bc96"},"id":"e24","answer":"","path":"./img/exercises/e24.png","__v":0}
+{"_id":{"$oid":"5cdb7116fd1d1a001712bc97"},"id":"e25","answer":"","path":"./img/exercises/e25.png","__v":0}
+{"_id":{"$oid":"5cdb733bfd1d1a001712bc98"},"id":"e20","answer":"name: Marcela","path":"./img/exercises/e20.png","__v":0}
