@@ -1,5 +1,5 @@
-mongoexport --db simplePython --collection exercises --out infos.json
-mongoexport --db simplePython --collection users --out infos.json
+mongoexport --db simplePython --collection exercises --out exercises.json
+mongoexport --db simplePython --collection users --out users.json
 mongoexport --db simplePython --collection infos --out infos.json
 
 mongoimport --db simplePython --collection exercises --file ./dummyDB/exercises.json
